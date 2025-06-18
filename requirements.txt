@@ -1,0 +1,8 @@
+deepgram-sdk>=2.12.0
+websockets==12.0
+pyaudio==0.2.14
+aiohttp==3.9.1
+fastapi==0.104.1
+uvicorn==0.24.0
+python-dotenv==1.0.0
+openai>=1.82.1
