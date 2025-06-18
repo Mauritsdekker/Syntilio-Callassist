@@ -315,7 +315,7 @@ async def generate_conversation_summary(conversation_buffer: ConversationBuffer,
             [Korte, duidelijke samenvatting van het gesprek en de belangrijkste medische/zorgpunten]
 
             AFSPRAKEN
-            [Lijst van gemaakte afspraken en overeenkomsten, inclusief data en tijden]
+            [Lijst van gemaakte afspraken en overeenkomsten, inclusief data en tijden. ALLEEN ALS DEZE BENOEMT ZIJN IN HET GESPREK]
 
             INSTRUCTIES
             [Specifieke zorginstructies en aandachtspunten voor de opvolging]
@@ -324,7 +324,7 @@ async def generate_conversation_summary(conversation_buffer: ConversationBuffer,
             [Actuele medicatie-overzicht, inclusief dosering, frequentie en eventuele wijzigingen]
 
             VOLGENDE STAPPEN
-            [Concrete vervolgstappen en afspraken voor de opvolging]
+            [Concrete vervolgstappen en afspraken voor de opvolging. ALLEEN ALS DEZE BENOEMT ZIJN IN HET GESPREK]
 
             Met vriendelijke groet,
             [Naam zorgverlener]"""
@@ -355,7 +355,7 @@ async def generate_conversation_summary(conversation_buffer: ConversationBuffer,
             [Beoordeling en diagnose]
 
             PLAN
-            [Behandelplan en vervolgstappen]"""
+            [Behandelplan en vervolgstappen. Gebruik informatie benoemd in het gesprek]"""
 
         # Generate the summary using the appropriate prompt
         response = await generate_summary(system_prompt, user_prompt)
